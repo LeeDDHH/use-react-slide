@@ -1,0 +1,51 @@
+.scroll {
+  --size: 0.9;
+  --color: rgba(255, 255, 255, 0.75);
+  --opacity: 1;
+  --width: calc(26px * var(--size));
+  --height: calc(var(--width) * 2);
+  --ballSize: calc(var(--width) / 4);
+  border: none;
+  display: block;
+  background: transparent;
+  cursor: s-resize;
+  z-index: 1001;
+  transition: opacity 0.165s ease-out, transform 0.165s ease-out;
+  position: relative;
+}
+.scroll.hidden {
+  transform: translate3d(0, 25px, 0);
+  opacity: 0;
+}
+.scroll span {
+  display: block;
+  width: var(--width);
+  height: var(--height);
+  border: calc(2px * var(--size)) solid var(--color);
+  border-radius: calc(var(--width) / 2);
+}
+.scroll span:before {
+  content: ' ';
+  width: var(--ballSize);
+  height: var(--ballSize);
+  border-radius: 50%;
+  background-color: var(--color);
+  position: absolute;
+  top: calc(var(--height) * 0.7);
+  left: calc(50% - var(--ballSize) / 2);
+  animation: scroll 1s infinite;
+}
+.scroll span:after {
+  content: 'DETALHES';
+  position: absolute;
+  display: none;
+  color: var(--color);
+  font-family: 'Source Code Pro', monospace;
+  bottom: calc(-24px * var(--size));
+  line-height: calc(20px * var(--size));
+  font-size: calc(12px * var(--size));
+  left: calc(50% - calc(72px * var(--size)) / 2);
+  width: calc(72px * var(--size));
+  text-align: center;
+  padding-top: calc(12px * var(--size));
+}

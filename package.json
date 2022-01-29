@@ -1,7 +1,7 @@
 {
-  "name": "react-ts-webpack",
+  "name": "use-react-slide",
   "version": "1.0.0",
-  "description": "react + typescript + webpack template",
+  "description": "react-awesome-slider template",
   "main": "dist/index.js",
   "private": true,
   "scripts": {
@@ -24,6 +24,7 @@
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "cross-env": "^7.0.3",
+    "css-loader": "^6.5.1",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.28.0",
@@ -35,7 +36,9 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^17.0.2",
+    "reseter.css": "^2.0.0",
     "source-map-loader": "^3.0.1",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",

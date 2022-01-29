@@ -1,12 +1,11 @@
-'use strict'
+'use strict';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () => {
-  return (
-    <div>Hello world</div>
-  )
-};
+import 'reseter.css/css/minireseter.css';
+import './styles/reset.module.css';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+import App from './components/App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
